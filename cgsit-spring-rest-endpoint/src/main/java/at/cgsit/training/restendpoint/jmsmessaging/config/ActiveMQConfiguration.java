@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+// @ Configuration
 public class ActiveMQConfiguration {
 
-  @Bean
+  // @Bean
   public ActiveMQSslConnectionFactory activeMQSslConnectionFactory(
       @Value("${activemq.broker-url}") String brokerUrl
       //@Value("${spring.activemq.ssl.trustStorePath}") String trustStorePath,
@@ -18,6 +18,9 @@ public class ActiveMQConfiguration {
       ) throws Exception {
 
     ActiveMQSslConnectionFactory factory = new ActiveMQSslConnectionFactory(brokerUrl);
+
+    // factory.setUserName("cgsDemoBrokerUser");
+    // factory.setPassword("cgsDemoBroker1224");
 
     //factory.setTrustStore(trustStorePath);
     //factory.setTrustStorePassword(trustStorePass);
