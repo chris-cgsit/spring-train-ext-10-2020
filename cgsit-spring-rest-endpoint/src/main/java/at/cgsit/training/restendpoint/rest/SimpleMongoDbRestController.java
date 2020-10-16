@@ -29,6 +29,8 @@ public class SimpleMongoDbRestController {
     logger.info("preDestroy");
   }
 
+  // http://localhost:8080/simplerest/chatmessages
+
   @PostConstruct
   public void init() {
     logger.info("PostConstruct init pre db update");
