@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ChatMessageMongoDbRepository extends MongoRepository<ChatMessageMongoDb, String> {
 
-    public ChatMessageMongoDb findBySender(String sender);
-
   }

@@ -30,9 +30,6 @@ public class RestEndpointApplication {
 
     public static void main(String[] args) {
 
-      //simple startup version
-      //SpringApplication.run(FirstexampleApplication.class, args);
-
       SpringApplication app = new SpringApplication(RestEndpointApplication.class);
   	  app.setBannerMode(Banner.Mode.LOG);
       ConfigurableApplicationContext context = app.run(args);
