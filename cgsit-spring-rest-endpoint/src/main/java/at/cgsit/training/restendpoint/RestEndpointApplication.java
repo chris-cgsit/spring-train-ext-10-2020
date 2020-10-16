@@ -22,25 +22,20 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageType;
 
 
-// @SpringBootApplication
-// @ComponentScan(basePackages="at.cgsit")
-
+@SpringBootApplication
+@ComponentScan(basePackages="at.cgsit")
 public class RestEndpointApplication {
 
   static Logger logger = LoggerFactory.getLogger(RestEndpointApplication.class);
 
-    public static void mainSDDF(String[] args) {
+    public static void main(String[] args) {
 
       //simple startup version
       //SpringApplication.run(FirstexampleApplication.class, args);
 
       SpringApplication app = new SpringApplication(RestEndpointApplication.class);
-      
-	  app.setBannerMode(Banner.Mode.LOG);
-	  
-      //ConfigurableApplicationContext context = app.run(args);
-
-
+  	  app.setBannerMode(Banner.Mode.LOG);
+      ConfigurableApplicationContext context = app.run(args);
     }
 
     /*
