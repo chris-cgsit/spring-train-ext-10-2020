@@ -1,4 +1,4 @@
-package at.cgsit.training.restendpoint.jmsmessaging;
+package at.cgsit.training.restendpoint.jmsmessaging.config;
 
 import org.apache.activemq.ActiveMQSslConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
