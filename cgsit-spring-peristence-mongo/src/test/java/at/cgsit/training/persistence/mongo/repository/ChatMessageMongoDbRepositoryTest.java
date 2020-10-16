@@ -27,14 +27,24 @@ class ChatMessageMongoDbRepositoryTest {
 
     ChatMessageMongoDb save = repository.save(chatMessageMongoDb);
     assertThat(save).isNotNull();
-    
+
   }
-
-
 
   @Test void testMongoDbFindAll() {
     List<ChatMessageMongoDb> allMessageMongoDbs = repository.findAll();
     assertThat(allMessageMongoDbs).isNotNull();
   }
 
+  @Test void testMongoDbFindByName() {
+
+    List<ChatMessageMongoDb> resultList = repository.findBySender("johnDoe");
+    assertThat(resultList).isNotNull();
+
+  }
+
+
 }
+
+
+
+
