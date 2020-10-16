@@ -1,5 +1,6 @@
 package at.cgsit.training.restendpoint.rest;
 
+import at.cgsit.training.persistence.mongo.config.LoadDatabaseMongoDb;
 import at.cgsit.training.persistence.mongo.model.ChatMessageMongoDb;
 import at.cgsit.training.persistence.mongo.repository.ChatMessageMongoDbRepository;
 import org.slf4j.Logger;
@@ -20,6 +21,8 @@ public class SimpleMongoDbRestController {
   @Autowired
   private ChatMessageMongoDbRepository repository;
 
+  @Autowired
+  private LoadDatabaseMongoDb loadDatabaseMongoDb;
 
   @PreDestroy
   public void preDestroy() {
@@ -28,9 +31,11 @@ public class SimpleMongoDbRestController {
 
   @PostConstruct
   public void init() {
-    logger.info("PostConstruct init ");
-
+    logger.info("PostConstruct init pre db update");
+    loadDatabaseMongoDb.initDatabase();
+    logger.info("PostConstruct init posts db update");
   }
+
 
   @GetMapping("/chatmessages")
   public @ResponseBody List<ChatMessageMongoDb> all() {

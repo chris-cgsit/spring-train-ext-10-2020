@@ -22,7 +22,7 @@ public class SimpleRestController {
 
   @PostConstruct
   public void init() {
-    loadDatabaseMongoDb.initDatabase();
+    //loadDatabaseMongoDb.initDatabase();
   }
 
   @GetMapping("/properties/{property}")
