@@ -1,6 +1,6 @@
 package at.cgsit.training.restendpoint;
 
-import at.cgsit.training.common.model.ChatMessageDTO;
+// import at.cgsit.training.common.model.ChatMessageDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,7 +1,8 @@
 package at.cgsit.training.persistence.mongo.config;
 
 import at.cgsit.training.persistence.mongo.model.ChatMessageMongoDb;
-import at.cgsit.training.persistence.mongo.repository.ChatMessageMongoDbRepository;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class LoadDatabaseMongoDb {
   private static final Logger log = LoggerFactory.getLogger(LoadDatabaseMongoDb.class);
 
   @Autowired
-  private ChatMessageMongoDbRepository chatMessageMongoDbRepository;
+  // private ChatMessageMongoDbRepository chatMessageMongoDbRepository;
 
   public void initDatabase() {
 
@@ -25,7 +26,8 @@ public class LoadDatabaseMongoDb {
     chatMessage.setRecipient("franky");
     chatMessage.setContent("test from MongoDB");
 
-     log.info("Preloading " + chatMessageMongoDbRepository.save(chatMessage));
+    // log.info("Preloading " + chatMessageMongoDbRepository.save(chatMessage));
+
   }
 }
 
