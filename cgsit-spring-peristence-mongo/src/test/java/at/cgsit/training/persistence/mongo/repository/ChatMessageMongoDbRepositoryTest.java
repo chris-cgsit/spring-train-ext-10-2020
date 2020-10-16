@@ -1,5 +1,6 @@
 package at.cgsit.training.persistence.mongo.repository;
 
+import at.cgsit.training.persistence.mongo.config.LoadDatabaseMongoDb;
 import at.cgsit.training.persistence.mongo.config.MongoDbConfiguration;
 import at.cgsit.training.persistence.mongo.model.ChatMessageMongoDb;
 import org.junit.jupiter.api.Test;
@@ -21,8 +22,17 @@ class ChatMessageMongoDbRepositoryTest {
   @Autowired
   private ChatMessageMongoDbRepository repository;
 
+  @Test void testMongoDbAdd() {
+    ChatMessageMongoDb chatMessageMongoDb = LoadDatabaseMongoDb.ceateMongoDbChatMessage();
 
-  @Test void testMongoDB() {
+    ChatMessageMongoDb save = repository.save(chatMessageMongoDb);
+    assertThat(save).isNotNull();
+    
+  }
+
+
+
+  @Test void testMongoDbFindAll() {
     List<ChatMessageMongoDb> allMessageMongoDbs = repository.findAll();
     assertThat(allMessageMongoDbs).isNotNull();
   }
