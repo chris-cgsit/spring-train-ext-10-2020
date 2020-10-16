@@ -39,20 +39,7 @@ public class RestEndpointApplication {
 	  app.setBannerMode(Banner.Mode.LOG);
 	  
       //ConfigurableApplicationContext context = app.run(args);
-	  
-	  
 
-      /*
-      JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
-      // Send a message with a POJO - the template reuse the message converter
-      logger.info("Sending a chat message ");
-      ChatMessageDTO cmDto = new ChatMessageDTO();
-      cmDto.setSender("john doe");
-      cmDto.setRecipient("franky");
-      cmDto.setContent("content example ");
-
-      jmsTemplate.convertAndSend("test1", cmDto);
-      */
 
     }
 
