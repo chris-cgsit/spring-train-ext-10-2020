@@ -26,8 +26,9 @@
         <!--module>cgsit-spring-application</module -->
         <module>cgsit-spring-rest-endpoint</module>
         <module>cgsit-spring-peristence-model</module>
-        <!--module>cgsit-spring-peristence-repository</module -->
+        <module>cgsit-spring-peristence-repository</module>
         <module>cgsit-spring-peristence-mongo</module>
+        <module>cgsit-spring-simple-examples</module>
     </modules>
 
     <dependencies>
