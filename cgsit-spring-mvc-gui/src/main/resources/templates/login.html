@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Chat Message System Login page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+</head>
+    <body>
+    <div class="row" align="center">
+      <h1>Chat Message System Login page</h1>
+        <p th:if="${loginError}" class="error">Wrong user or password</p>
+        <form class="form-horizontal" th:action="@{/login.html}" method="post">
+            <div class="col-sm-10">
+                <label for="username">Username</label>:
+                <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
+            </div>
+            <div class="col-sm-10">
+                <label for="password">Password</label>:
+                <input type="password" id="password" name="password" /> <br />
+            </div>
+            <div class="col-sm-10">
+                <input type="submit" value="Log in" />
+            </div>
+        </form>
+    </div>
+    </body>
+</html>

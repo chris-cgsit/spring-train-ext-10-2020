@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Tutorial - Chat Message Show </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/jquery.min.js"
+            th:src="@{/webjars/jquery/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{/css/spring-core.css}" rel="stylesheet" media="screen"/>
+    <style>
+        body {
+            background-color: #f8f4f4;
+        }
+        div.ex1 {
+            width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container ex1" align="center">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show Chat Message</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+                <div class="row form-group">
+                    <label class="col-sm-2 control-label">Product Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${chatmessage.id}">Product Id</p>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-2 control-label">Sender:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${chatmessage.sender}">Sender</p>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-2 control-label">Recipient:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${chatmessage.recipient}">Recipient</p>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-2 sm-2 control-label">Chat Message:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${chatmessage.content}">Image</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/chatmessage/list">Back to List</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
