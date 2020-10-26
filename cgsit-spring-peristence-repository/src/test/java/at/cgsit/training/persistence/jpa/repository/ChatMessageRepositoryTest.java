@@ -1,5 +1,6 @@
 package at.cgsit.training.persistence.jpa.repository;
 
+import at.cgsit.training.persistence.jpa.config.ConfigureDatabase;
 import at.cgsit.training.persistence.jpa.model.ChatMessage;
 import at.cgsit.training.persistence.jpa.utils.TestDataGenerator;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -16,7 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 //@DataJpaTest
-@SpringBootTest
+@SpringBootTest(classes = ConfigureDatabase.class)
+@AutoConfigureDataJpa
 public class ChatMessageRepositoryTest {
 
   Logger logger = LoggerFactory.getLogger(ChatMessageRepositoryTest.class);
