@@ -16,6 +16,7 @@ public class ChatMessageDtoJmsReceiver {
 
   @JmsListener(destination = ChatMessageConstants.CHAT_MESSAGE_QUEUE )  // , containerFactory = "myFactory")
   public void receiveMessage(String reseived) throws JsonProcessingException {
+
     logger.info(" - JMS ------- Received String {}", reseived);
 
     ChatMessageDTO chatMessageDTO = (ChatMessageDTO)new ObjectMapper().readValue(reseived, ChatMessageDTO.class);
