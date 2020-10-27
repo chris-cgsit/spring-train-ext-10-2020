@@ -16,7 +16,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableJpaRepositories(basePackages="at.cgsit.training.persistence.jpa.repository")
 public class ConfigureDatabase {
-
   private static final Logger log = LoggerFactory.getLogger(ConfigureDatabase.class);
 
   @Bean

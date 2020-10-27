@@ -8,8 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
@@ -18,8 +20,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 //@DataJpaTest
-@SpringBootTest(classes = ConfigureDatabase.class)
 @AutoConfigureDataJpa
+@SpringBootTest(classes = ConfigureDatabase.class)
+@EntityScan("at.cgsit.training.persistence.jpa.*")
+@ComponentScan(basePackages="at.cgsit")
 public class ChatMessageRepositoryTest {
 
   Logger logger = LoggerFactory.getLogger(ChatMessageRepositoryTest.class);
