@@ -26,10 +26,11 @@
         <module>cgsit-spring-mvc-gui</module>
         <module>cgsit-spring-rest-endpoint</module>
         <module>cgsit-spring-domain-layer</module>
-        <module>cgsit-spring-peristence-model</module>
+        <module>cgsit-spring-shared-model</module>
         <module>cgsit-spring-peristence-repository</module>
         <module>cgsit-spring-peristence-mongo</module>
-        <module>cgsit-spring-simple-examples</module>
+        <module>cgsit-spring-basic-examples</module>
+        <module>cgsit-spring-jms-receiver</module>
     </modules>
 
     <dependencies>

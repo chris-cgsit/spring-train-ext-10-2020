@@ -13,7 +13,7 @@ public class ChatMessageToChatMessageDTO implements Converter<ChatMessage, ChatM
   public ChatMessageDTO convert(ChatMessage cmInput) {
     ChatMessageDTO message = new ChatMessageDTO();
     if (cmInput.getId() != null  && !StringUtils.isEmpty(cmInput.getId())) {
-      message.setId(Long.valueOf(cmInput.getId()));
+      message.setId(String.valueOf(cmInput.getId()));
     }
     message.setType( ChatMessageDTO.MessageType.valueOf(cmInput.getType().name()));
     message.setRecipient(cmInput.getRecipient());

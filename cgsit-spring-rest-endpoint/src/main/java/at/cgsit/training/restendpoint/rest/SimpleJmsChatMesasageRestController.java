@@ -1,5 +1,6 @@
 package at.cgsit.training.restendpoint.rest;
 
+import at.cgsit.training.firstexample.dto.ChatMessageDTO;
 import at.cgsit.training.persistence.mongo.model.ChatMessageMongoDb;
 import at.cgsit.training.persistence.mongo.repository.ChatMessageMongoDbRepository;
 import at.cgsit.training.restendpoint.jmsmessaging.send.ChatMessageSender;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import training.common.model.ChatMessageDTO;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

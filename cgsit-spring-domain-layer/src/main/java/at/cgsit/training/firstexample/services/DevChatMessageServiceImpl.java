@@ -1,7 +1,7 @@
 package at.cgsit.training.firstexample.services;
 
-import at.cgsit.training.firstexample.chat.model.ChatMessage;
 import at.cgsit.training.firstexample.dto.ChatMessageDTO;
+import at.cgsit.training.persistence.jpa.model.ChatMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
