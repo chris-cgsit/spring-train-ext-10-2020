@@ -6,10 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages="at.cgsit")
-public class RestEndpointOauthApplication {
+public class RestEndpointOAuthApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(RestEndpointOauthApplication.class, args);
+    SpringApplication.run(RestEndpointOAuthApplication.class, args);
   }
 
 }
