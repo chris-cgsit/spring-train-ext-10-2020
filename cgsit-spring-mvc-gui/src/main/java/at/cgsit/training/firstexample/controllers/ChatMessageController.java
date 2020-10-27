@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
+/**
+ * Chat Message MVC Controller
+ */
 @Controller
 public class ChatMessageController {
 
