@@ -25,6 +25,7 @@
     <modules>
         <module>cgsit-spring-mvc-gui</module>
         <module>cgsit-spring-rest-endpoint</module>
+        <module>cgsit-spring-rest-endpoint-two</module>
         <module>cgsit-spring-domain-layer</module>
         <module>cgsit-spring-shared-model</module>
         <module>cgsit-spring-peristence-repository</module>

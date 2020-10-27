@@ -3,6 +3,10 @@ package at.cgsit.training.jms.receiver.config;
 import org.apache.activemq.ActiveMQSslConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 
+/**
+ * use this to configure factory with SSL credentials
+ * the simple ActiveMQ AWS Server does not require ssl out of the boxs
+ */
 // @ Configuration
 public class ActiveMQConfiguration {
 
