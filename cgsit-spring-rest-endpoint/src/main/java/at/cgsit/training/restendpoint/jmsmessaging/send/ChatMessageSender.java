@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ChatMessageSender {
-
     private static final Logger LOGGER =  LoggerFactory.getLogger(ChatMessageSender.class);
 
     @Autowired

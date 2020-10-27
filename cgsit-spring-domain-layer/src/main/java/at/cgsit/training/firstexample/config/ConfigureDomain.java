@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * otherwise see Autoconfig for properties to configure
  */
 @Configuration
-@EnableJpaRepositories(basePackages="at.cgsit.training.persistence.jpa.repository")
+//@EnableJpaRepositories(basePackages="at.cgsit.training.persistence.jpa.repository")
 public class ConfigureDomain {
 
   private static final Logger log = LoggerFactory.getLogger(ConfigureDomain.class);
