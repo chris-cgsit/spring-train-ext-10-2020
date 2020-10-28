@@ -6,9 +6,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TestQuaifierComponent implements TestQualifier {
+public class TestQualifierComponent implements TestQualifier {
 
-  Logger logger = LoggerFactory.getLogger(TestQuaifierComponent.class);
+  Logger logger = LoggerFactory.getLogger(TestQualifierComponent.class);
 
   @Override
   public String echo(String echo) {
